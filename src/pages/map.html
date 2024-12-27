@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <!-- favicon -->
+     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <title>Aditmart</title>
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet"
+        href="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder@2.4.0/dist/Control.Geocoder.css">
+    <link rel="stylesheet" href="/src/assets/gis/css/L.Control.ZoomBar.css">
+    <link rel="stylesheet" href="/src/assets/gis/css/Control.MiniMap.css">
+    <link rel="stylesheet" href="/src/assets/gis/css/Leaflet.Coordinates-0.1.5.css">
+    <link rel="stylesheet" href="/src/assets/gis/css/leaflet.groupedlayercontrol.css">
+</head>
+
+<body>
+    <div id="main" class="w-full h-full min-h-screen overflow-hidden mx-auto">
+        <!-- NAVBAR START -->
+        <nav id="navbar" class="fixed top-0 w-full backdrop-blur-md z-50">
+            <div class="max-w-[1280px] mx-auto w-full flex justify-between items-center px-[75px] py-[30px]">
+                <div class="w-[175px] shrink-0 overflow-hidden ">
+                    <a href="#"
+                        class="text-blue-700 font-bold flex text-2xl hover:text-red-700 transition-all duration-200">
+                        Adit<span class="text-black hover:text-red-700 transition-all duration-200">Mart</span>
+                    </a>
+                </div>
+                <ul class="flex items-center gap-[30px]">
+                    <li>
+                        <a href="/index.html" class="font-medium">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="font-medium">Peta Mitra</a>
+                    </li>
+                    <li>
+                        <a href="/src/pages/promo.html" class="font-medium">Promo</a>
+                    </li>
+                    <li>
+                        <a href="/src/pages/about.html" class="font-medium">About</a>
+                    </li>
+                </ul>
+                <div class="flex gap-[10px] items-center">
+                    <a href="#">
+                        <div class="w-[44px] shrink-0">
+                            <img src="/src/assets/images/icons/cart-bg-white.svg" alt="icon">
+                        </div>
+                    </a>
+                    <a href="#" class="bg-weserve-navy rounded-full px-[30px] py-[10px] text-white font-semibold">Sign
+                        In</a>
+                </div>
+            </div>
+        </nav>
+        <!-- NAVBAR END -->
+        <div class="flex flex-col gap-[20px] pt-32">
+            <section id="best-choices" class="max-w-[1280px] w-full overflow-hidden mx-auto">
+                <div class="flex flex-col gap-[30px] px-[75px]">
+                    <h2 class="font-clash-display font-semibold text-[46px] text-center pt-2 pb-4">Peta Mitra di Jakarta Barat
+                    </h2>
+
+                    <!-- MAPS START -->
+                    <div class="container z-0">
+                        <div id="map" class="mb-5" style="height: 520px;">
+                        </div>
+                    </div>
+                    <!-- MAPS END -->
+
+                    <!-- LOCATION LIST START -->
+                    <h2 class="font-clash-display font-semibold text-[46px] text-center mt-5">Daftar Mitra Indomart di Jakarta Barat</h2>
+                    <div class="grid w-full grid-cols-3 gap-x-[30px] gap-y-[40px] mt-5 pb-32 ">
+                        <a href="#">
+                            <div
+                                class="flex max-w-[400px] flex-col gap-4 rounded-[20px] pb-4 ring-1 ring-blue-300 transition-all duration-300 hover:ring-blue-700 shadow-md">
+                                <div class="relative">
+                                    <div class="h-[200px] w-full overflow-hidden rounded-t-[20px]">
+                                        <img class="h-full w-full object-cover"
+                                            src="/src/assets/images/indomaret/1_jelambar_baru_raya_8.jpg"
+                                            alt="Indomaret Jelambar Baru Raya 8" />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2 px-5">
+                                    <h2 class="text-balance text-lg font-bold text-blue-900">Indomaret Jelambar Baru
+                                        Raya 8</h2>
+                                    <p class="text-sm text-gray-700">Jalan Jelambar Baru Raya No. 8, Kel. Jelambar Baru,
+                                        Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460</p>
+                                    <div class="flex flex-col text-sm text-gray-600">
+                                        <p><strong>Latitude:</strong> -6.155100965685419</p>
+                                        <p><strong>Longitude:</strong> 106.79252114926645</p>
+                                    </div>
+                                    <p class="text-sm text-gray-600"><strong>Fasilitas:</strong> Toilet dan Tempat
+                                        Parkir</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div
+                                class="flex max-w-[400px] flex-col gap-4 rounded-[20px] pb-4 ring-1 ring-blue-300 transition-all duration-300 hover:ring-blue-700 shadow-md">
+                                <div class="relative">
+                                    <div class="h-[200px] w-full overflow-hidden rounded-t-[20px]">
+                                        <img class="h-full w-full object-cover"
+                                            src="/src/assets/images/indomaret/2_hadiah.jpg"
+                                            alt="Indomaret Hadiah" />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2 px-5">
+                                    <h2 class="text-balance text-lg font-bold text-blue-900">Indomaret Hadiah</h2>
+                                    <p class="text-sm text-gray-700">Jalan Hadiah Utama No. 32 - 32A, RT 008, RW 011,
+                                        Kel. Jelambar, Kec, Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460
+                                    </p>
+                                    <div class="flex flex-col text-sm text-gray-600">
+                                        <p><strong>Latitude:</strong> -6.160277751978404</p>
+                                        <p><strong>Longitude:</strong> 106.78564957339245</p>
+                                    </div>
+                                    <p class="text-sm text-gray-600"><strong>Fasilitas:</strong> Toilet dan Tempat
+                                        Parkir</p>
+                                </div>
+                            </div>
+                        </a>
+
+
+                        <a href="#">
+                            <div
+                                class="flex max-w-[400px] flex-col gap-4 rounded-[20px] pb-4 ring-1 ring-blue-300 transition-all duration-300 hover:ring-blue-700 shadow-md">
+                                <div class="relative">
+                                    <div class="h-[200px] w-full overflow-hidden rounded-t-[20px]">
+                                        <img class="h-full w-full object-cover"
+                                            src="/src/assets/images/indomaret/3_jelambar_baru_2.jpg"
+                                            alt="Indomaret Jelambar Baru 2" />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2 px-5">
+                                    <h2 class="text-balance text-lg font-bold text-blue-900">Indomaret Jelambar Baru 2
+                                    </h2>
+                                    <p class="text-sm text-gray-700">Jalan Jelambar Baru Raya Blok G Persil No. 12, 13,
+                                        14, Kel. Jelambar, Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta,
+                                        11460</p>
+                                    <div class="flex flex-col text-sm text-gray-600">
+                                        <p><strong>Latitude:</strong> -6.1550129329230305</p>
+                                        <p><strong>Longitude:</strong> 106.78751697862629</p>
+                                    </div>
+                                    <p class="text-sm text-gray-600"><strong>Fasilitas:</strong> Toilet, Tempat Parkir,
+                                        dan ATM</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#">
+                            <div
+                                class="flex max-w-[400px] flex-col gap-4 rounded-[20px] pb-4 ring-1 ring-blue-300 transition-all duration-300 hover:ring-blue-700 shadow-md">
+                                <div class="relative">
+                                    <div class="h-[200px] w-full overflow-hidden rounded-t-[20px]">
+                                        <img class="h-full w-full object-cover"
+                                            src="/src/assets/images/indomaret/4_jelambar_33.jpg"
+                                            alt="Indomaret Jelambar Utama Raya 33" />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2 px-5">
+                                    <h2 class="text-balance text-lg font-bold text-blue-900">Indomaret Jelambar Utama
+                                        Raya 33</h2>
+                                    <p class="text-sm text-gray-700">Jalan Jelambar Baru No. 33, Kel. Jelambar, Kec.
+                                        Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460</p>
+                                    <div class="flex flex-col text-sm text-gray-600">
+                                        <p><strong>Latitude:</strong> -6.155266454313211</p>
+                                        <p><strong>Longitude:</strong> 106.78969440559811</p>
+                                    </div>
+                                    <p class="text-sm text-gray-600"><strong>Fasilitas:</strong> Toilet, Tempat Parkir,
+                                        dan ATM</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#">
+                            <div
+                                class="flex max-w-[400px] flex-col gap-4 rounded-[20px] pb-4 ring-1 ring-blue-300 transition-all duration-300 hover:ring-blue-700 shadow-md">
+                                <div class="relative">
+                                    <div class="h-[200px] w-full overflow-hidden rounded-t-[20px]">
+                                        <img class="h-full w-full object-cover"
+                                            src="/src/assets/images/indomaret/5_empang_bahagia_4.jpg"
+                                            alt="Indomaret Empang Bahagia 4" />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2 px-5">
+                                    <h2 class="text-balance text-lg font-bold text-blue-900">Indomaret Empang Bahagia 4
+                                    </h2>
+                                    <p class="text-sm text-gray-700">Jalan Empang Bahagia Raya No. 4 Blok AB6&7, Kel.
+                                        Jelambar, Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460</p>
+                                    <div class="flex flex-col text-sm text-gray-600">
+                                        <p><strong>Latitude:</strong> -6.159206472383654</p>
+                                        <p><strong>Longitude:</strong> 106.79031091764533</p>
+                                    </div>
+                                    <p class="text-sm text-gray-600"><strong>Fasilitas:</strong> Toilet, Tempat Parkir,
+                                        dan ATM</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div
+                                class="flex max-w-[400px] flex-col gap-4 rounded-[20px] pb-4 ring-1 ring-blue-300 transition-all duration-300 hover:ring-blue-700 shadow-md">
+                                <div class="relative">
+                                    <div class="h-[200px] w-full overflow-hidden rounded-t-[20px]">
+                                        <img class="h-full w-full object-cover"
+                                            src="/src/assets/images/indomaret/6_empang_bahagia.jpg"
+                                            alt="Indomaret Empang Bahagia" />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2 px-5">
+                                    <h2 class="text-balance text-lg font-bold text-blue-900">Indomaret Empang Bahagia
+                                    </h2>
+                                    <p class="text-sm text-gray-700">Jalan Empang Bahagia No. 49, Kel. Jelambar, Kec.
+                                        Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460</p>
+                                    <div class="flex flex-col text-sm text-gray-600">
+                                        <p><strong>Latitude:</strong> -6.158564708556117</p>
+                                        <p><strong>Longitude:</strong> 106.7876531235467</p>
+                                    </div>
+                                    <p class="text-sm text-gray-600"><strong>Fasilitas:</strong> Toilet, Tempat Parkir,
+                                        Tempat Duduk, dan ATM</p>
+                                </div>
+                            </div>
+                        </a>
+
+
+
+                        <a href="#">
+                            <div
+                                class="flex max-w-[400px] flex-col gap-4 rounded-[20px] pb-4 ring-1 ring-blue-300 transition-all duration-300 hover:ring-blue-700 shadow-md">
+                                <div class="relative">
+                                    <div class="h-[200px] w-full overflow-hidden rounded-t-[20px]">
+                                        <img class="h-full w-full object-cover"
+                                            src="/src/assets/images/indomaret/7_hadiah2.jpg"
+                                            alt="Indomaret Hadiah No. 2" />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2 px-5">
+                                    <h2 class="text-balance text-lg font-bold text-blue-900">Indomaret Hadiah No. 2</h2>
+                                    <p class="text-sm text-gray-700">Jalan Hadiah 2, Kel. Jelambar, Kec. Grogol
+                                        Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460</p>
+                                    <div class="flex flex-col text-sm text-gray-600">
+                                        <p><strong>Latitude:</strong> -6.16144931125967</p>
+                                        <p><strong>Longitude:</strong> 106.78189920969777</p>
+                                    </div>
+                                    <p class="text-sm text-gray-600"><strong>Fasilitas:</strong> Toilet, Tempat Parkir,
+                                        dan ATM</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#">
+                            <div
+                                class="flex max-w-[400px] flex-col gap-4 rounded-[20px] pb-4 ring-1 ring-blue-300 transition-all duration-300 hover:ring-blue-700 shadow-md">
+                                <div class="relative">
+                                    <div class="h-[200px] w-full overflow-hidden rounded-t-[20px]">
+                                        <img class="h-full w-full object-cover"
+                                            src="/src/assets/images/indomaret/8_jelambar_kav_polri.jpg"
+                                            alt="Indomaret Jelambar Kav. Polri" />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2 px-5">
+                                    <h2 class="text-balance text-lg font-bold text-blue-900">Indomaret Jelambar Kav.
+                                        Polri</h2>
+                                    <p class="text-sm text-gray-700">Jalan Almanah Kav. Polri Blok E No. 1393 B-C, Kel.
+                                        Jelambar, Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460</p>
+                                    <div class="flex flex-col text-sm text-gray-600">
+                                        <p><strong>Latitude:</strong> -6.156123068248888</p>
+                                        <p><strong>Longitude:</strong> 106.78025071137431</p>
+                                    </div>
+                                    <p class="text-sm text-gray-600"><strong>Fasilitas:</strong> Toilet, Tempat Parkir,
+                                        dan ATM</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#">
+                            <div
+                                class="flex max-w-[400px] flex-col gap-4 rounded-[20px] pb-4 ring-1 ring-blue-300 transition-all duration-300 hover:ring-blue-700 shadow-md">
+                                <div class="relative">
+                                    <div class="h-[200px] w-full overflow-hidden rounded-t-[20px]">
+                                        <img class="h-full w-full object-cover"
+                                            src="/src/assets/images/indomaret/9_jelambar_utama_51.jpg"
+                                            alt="Indomaret Jelambar Utama 51" />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2 px-5">
+                                    <h2 class="text-balance text-lg font-bold text-blue-900">Indomaret Jelambar Utama 51
+                                    </h2>
+                                    <p class="text-sm text-gray-700">Jalan Jelambar Utama No. 51, Blok J Persil No. 28,
+                                        Kel. Jelambar Baru, Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta,
+                                        11460</p>
+                                    <div class="flex flex-col text-sm text-gray-600">
+                                        <p><strong>Latitude:</strong> -6.152774156483126</p>
+                                        <p><strong>Longitude:</strong> 106.78470822205712</p>
+                                    </div>
+                                    <p class="text-sm text-gray-600"><strong>Fasilitas:</strong> Toilet, Tempat Parkir,
+                                        dan ATM</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#">
+                            <div
+                                class="flex max-w-[400px] flex-col gap-4 rounded-[20px] pb-4 ring-1 ring-blue-300 transition-all duration-300 hover:ring-blue-700 shadow-md">
+                                <div class="relative">
+                                    <div class="h-[200px] w-full overflow-hidden rounded-t-[20px]">
+                                        <img class="h-full w-full object-cover"
+                                            src="/src/assets/images/indomaret/10_jelambar_utama_3.jpg"
+                                            alt="Indomaret Jelambar Utama 3" />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2 px-5">
+                                    <h2 class="text-balance text-lg font-bold text-blue-900">Indomaret Jelambar Utama 3
+                                    </h2>
+                                    <p class="text-sm text-gray-700">Jalan Utama Raya No. 3A-3B-3C-3D, Kel. Jelambar,
+                                        Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460</p>
+                                    <div class="flex flex-col text-sm text-gray-600">
+                                        <p><strong>Latitude:</strong> -6.1508453234502936</p>
+                                        <p><strong>Longitude:</strong> 106.78113397119267</p>
+                                    </div>
+                                    <p class="text-sm text-gray-600"><strong>Fasilitas:</strong> Toilet, Tempat Parkir,
+                                        dan ATM</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div
+                                class="flex max-w-[400px] flex-col gap-4 rounded-[20px] pb-4 ring-1 ring-blue-300 transition-all duration-300 hover:ring-blue-700 shadow-md">
+                                <div class="relative">
+                                    <div class="h-[200px] w-full overflow-hidden rounded-t-[20px]">
+                                        <img class="h-full w-full object-cover"
+                                            src="/src/assets/images/indomaret/11_jelambar_barat_2.jpg"
+                                            alt="Indomaret Jelambar Barat 2" />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2 px-5">
+                                    <h2 class="text-balance text-lg font-bold text-blue-900">Indomaret Jelambar Barat 2
+                                    </h2>
+                                    <p class="text-sm text-gray-700">Jalan Jelambar Barat III A, No. 27, Kel. Jelambar
+                                        Baru, Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460</p>
+                                    <div class="flex flex-col text-sm text-gray-600">
+                                        <p><strong>Latitude:</strong> -6.150643371547904</p>
+                                        <p><strong>Longitude:</strong> 106.78335531958476</p>
+                                    </div>
+                                    <p class="text-sm text-gray-600"><strong>Fasilitas:</strong> Toilet, Tempat Parkir,
+                                        dan ATM</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#">
+                            <div
+                                class="flex max-w-[400px] flex-col gap-4 rounded-[20px] pb-4 ring-1 ring-blue-300 transition-all duration-300 hover:ring-blue-700 shadow-md">
+                                <div class="relative">
+                                    <div class="h-[200px] w-full overflow-hidden rounded-t-[20px]">
+                                        <img class="h-full w-full object-cover"
+                                            src="/src/assets/images/indomaret/12_jelambar_barat_3.jpg"
+                                            alt="Indomaret Jelambar Barat 3" />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2 px-5">
+                                    <h2 class="text-balance text-lg font-bold text-blue-900">Indomaret Jelambar Barat 3
+                                    </h2>
+                                    <p class="text-sm text-gray-700">Jalan Jelambar Barat III No. 6, RT 006, RW 010,
+                                        Kel. Jelambar Baru, Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta,
+                                        11460</p>
+                                    <div class="flex flex-col text-sm text-gray-600">
+                                        <p><strong>Latitude:</strong> -6.146378492634196</p>
+                                        <p><strong>Longitude:</strong> 106.78336040332213</p>
+                                    </div>
+                                    <p class="text-sm text-gray-600"><strong>Fasilitas:</strong> Toilet, Tempat Parkir,
+                                        dan ATM</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#">
+                            <div
+                                class="flex max-w-[400px] flex-col gap-4 rounded-[20px] pb-4 ring-1 ring-blue-300 transition-all duration-300 hover:ring-blue-700 shadow-md">
+                                <div class="relative">
+                                    <div class="h-[200px] w-full overflow-hidden rounded-t-[20px]">
+                                        <img class="h-full w-full object-cover"
+                                            src="/src/assets/images/indomaret/13_pakuwon.jpg"
+                                            alt="Indomaret Pakuwon" />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2 px-5">
+                                    <h2 class="text-balance text-lg font-bold text-blue-900">Indomaret Pakuwon</h2>
+                                    <p class="text-sm text-gray-700">Jalan Jelambar Selatan Komplek Pakuwon GB/9, Kel.
+                                        Jelambar Baru, Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460
+                                    </p>
+                                    <div class="flex flex-col text-sm text-gray-600">
+                                        <p><strong>Latitude:</strong> -6.151002483359293</p>
+                                        <p><strong>Longitude:</strong> 106.79068878142252</p>
+                                    </div>
+                                    <p class="text-sm text-gray-600"><strong>Fasilitas:</strong> Toilet, Tempat Parkir,
+                                        dan ATM</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#">
+                            <div
+                                class="flex max-w-[400px] flex-col gap-4 rounded-[20px] pb-4 ring-1 ring-blue-300 transition-all duration-300 hover:ring-blue-700 shadow-md">
+                                <div class="relative">
+                                    <div class="h-[200px] w-full overflow-hidden rounded-t-[20px]">
+                                        <img class="h-full w-full object-cover"
+                                            src="/src/assets/images/indomaret/14_seni_budaya.jpg"
+                                            alt="Indomaret Seni Budaya" />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2 px-5">
+                                    <h2 class="text-balance text-lg font-bold text-blue-900">Indomaret Seni Budaya</h2>
+                                    <p class="text-sm text-gray-700">Jalan Seni Budaya Raya, RT 013, RW 015, Kel.
+                                        Jelambar Baru, Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460
+                                    </p>
+                                    <div class="flex flex-col text-sm text-gray-600">
+                                        <p><strong>Latitude:</strong> -6.149260730863426</p>
+                                        <p><strong>Longitude:</strong> 106.78483180834216</p>
+                                    </div>
+                                    <p class="text-sm text-gray-600"><strong>Fasilitas:</strong> Toilet dan Tempat
+                                        Parkir</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div
+                                class="flex max-w-[400px] flex-col gap-4 rounded-[20px] pb-4 ring-1 ring-blue-300 transition-all duration-300 hover:ring-blue-700 shadow-md">
+                                <div class="relative">
+                                    <div class="h-[200px] w-full overflow-hidden rounded-t-[20px]">
+                                        <img class="h-full w-full object-cover"
+                                            src="/src/assets/images/indomaret/15_duta_mas.jpg"
+                                            alt="Indomaret Duta Mas 11" />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2 px-5">
+                                    <h2 class="text-balance text-lg font-bold text-blue-900">Indomaret Duta Mas 11</h2>
+                                    <p class="text-sm text-gray-700">Jl. Kusuma C2, No. 11, RT 016, RW 009, Kel. Wijaya
+                                        Kusuma, Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460</p>
+                                    <div class="flex flex-col text-sm text-gray-600">
+                                        <p><strong>Latitude:</strong> -6.147464154951151</p>
+                                        <p><strong>Longitude:</strong> 106.78063019855028</p>
+                                    </div>
+                                    <p class="text-sm text-gray-600"><strong>Fasilitas:</strong> Toilet, Tempat Parkir,
+                                        dan ATM</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#">
+                            <div
+                                class="flex max-w-[400px] flex-col gap-4 rounded-[20px] pb-4 ring-1 ring-blue-300 transition-all duration-300 hover:ring-blue-700 shadow-md">
+                                <div class="relative">
+                                    <div class="h-[200px] w-full overflow-hidden rounded-t-[20px]">
+                                        <img class="h-full w-full object-cover"
+                                            src="/src/assets/images/indomaret/16_taman_duta_mas_1.jpg"
+                                            alt="Indomaret Taman Duta Mas 1" />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2 px-5">
+                                    <h2 class="text-balance text-lg font-bold text-blue-900">Indomaret Taman Duta Mas 1
+                                    </h2>
+                                    <p class="text-sm text-gray-700">Perum Duta Mas Blok B1 No. 11, Kel. Wijaya Kusuma,
+                                        Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460</p>
+                                    <div class="flex flex-col text-sm text-gray-600">
+                                        <p><strong>Latitude:</strong> -6.1488927742527135</p>
+                                        <p><strong>Longitude:</strong> 106.78016917439372</p>
+                                    </div>
+                                    <p class="text-sm text-gray-600"><strong>Fasilitas:</strong> Toilet dan Tempat
+                                        Parkir</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#">
+                            <div
+                                class="flex max-w-[400px] flex-col gap-4 rounded-[20px] pb-4 ring-1 ring-blue-300 transition-all duration-300 hover:ring-blue-700 shadow-md">
+                                <div class="relative">
+                                    <div class="h-[200px] w-full overflow-hidden rounded-t-[20px]">
+                                        <img class="h-full w-full object-cover"
+                                            src="/src/assets/images/indomaret/17_satria_raya.jpg"
+                                            alt="Indomaret Satria Raya" />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2 px-5">
+                                    <h2 class="text-balance text-lg font-bold text-blue-900">Indomaret Satria Raya</h2>
+                                    <p class="text-sm text-gray-700">Jalan Satria Raya, RT 004, RW 004, Kel. Jelambar,
+                                        Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460</p>
+                                    <div class="flex flex-col text-sm text-gray-600">
+                                        <p><strong>Latitude:</strong> -6.164160929346639</p>
+                                        <p><strong>Longitude:</strong> 106.78875816913174</p>
+                                    </div>
+                                    <p class="text-sm text-gray-600"><strong>Fasilitas:</strong> Toilet, Tempat Parkir,
+                                        dan ATM</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#">
+                            <div
+                                class="flex max-w-[400px] flex-col gap-4 rounded-[20px] pb-4 ring-1 ring-blue-300 transition-all duration-300 hover:ring-blue-700 shadow-md">
+                                <div class="relative">
+                                    <div class="h-[200px] w-full overflow-hidden rounded-t-[20px]">
+                                        <img class="h-full w-full object-cover"
+                                            src="/src/assets/images/indomaret/18_latumenten_20.jpg"
+                                            alt="Indomaret Latumenten 20" />
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-2 px-5">
+                                    <h2 class="text-balance text-lg font-bold text-blue-900">Indomaret Latumenten 20
+                                    </h2>
+                                    <p class="text-sm text-gray-700">Jalan Prof. Dr. Latumenten Kios AGF 16-19, Kel.
+                                        Jelambar, Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460</p>
+                                    <div class="flex flex-col text-sm text-gray-600">
+                                        <p><strong>Latitude:</strong> -6.1600043127157385</p>
+                                        <p><strong>Longitude:</strong> 106.79057850138389</p>
+                                    </div>
+                                    <p class="text-sm text-gray-600"><strong>Fasilitas:</strong> Toilet, Tempat Parkir,
+                                        dan ATM</p>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                    <!-- LOCATION LIST END -->
+                </div>
+            </section>
+            <footer class="relative z-10 w-full overflow-hidden mx-auto bg-[#070C29] -mt-[10px] pt-[10px]">
+                <div class="flex flex-col gap-[50px] px-[75px] pb-[50px] pt-[40px] max-w-[1280px] mx-auto">
+                    <div class="flex gap-[100px] items-center">
+                        <div class="flex flex-col gap-[30px]">
+                            <a href="#"
+                                class="text-blue-700 font-bold flex text-2xl hover:text-red-700 transition-all duration-200">
+                                Adit<span class="text-white hover:text-red-700 transition-all duration-200">Mart</span>
+                            </a>
+                            <p class="font-medium text-weserve-light leading-[28px]">Website Terbaik dalam menyediakan
+                                <br>Lokasi Indomart di Jakarta Barat.
+                            </p>
+                            <div class="flex gap-[14px] items-center">
+                                <a href="#" class="bg-white rounded-full p-[10px]">
+                                    <img src="/src/assets/images/icons/sms.svg" class="w-[24px] h-[24px]" alt="icon">
+                                </a>
+                                <a href="#" class="bg-white rounded-full p-[10px]">
+                                    <img src="/src/assets/images/icons/global-purple.svg" class="w-[24px] h-[24px]"
+                                        alt="icon">
+                                </a>
+                                <a href="#" class="bg-white rounded-full p-[10px]">
+                                    <img src="/src/assets/images/icons/call.svg" class="w-[24px] h-[24px]" alt="icon">
+                                </a>
+                                <a href="#" class="bg-white rounded-full p-[10px]">
+                                    <img src="/src/assets/images/icons/video-play.svg" class="w-[24px] h-[24px]"
+                                        alt="icon">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-[70px] content-center justify-end">
+                            <div class="flex flex-col gap-[30px]">
+                                <h4 class="text-white font-bold text-[18px]">Products</h4>
+                                <div class="flex flex-col gap-4">
+                                    <a href="#" class="text-weserve-light font-medium">Makanan</a>
+                                    <a href="#" class="text-weserve-light font-medium">Minuman</a>
+                                    <a href="#" class="text-weserve-light font-medium">Produk Kecantikan</a>
+                                    <a href="#" class="text-weserve-light font-medium">Frozen Foods</a>
+                                    <a href="#" class="text-weserve-light font-medium">Daily Needs</a>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-[30px]">
+                                <h4 class="text-white font-bold text-[18px]">Resouces</h4>
+                                <div class="flex flex-col gap-4">
+                                    <a href="#" class="text-weserve-light font-medium">Support 24/7</a>
+                                    <a href="#" class="text-weserve-light font-medium">Help Center</a>
+                                    <a href="#" class="text-weserve-light font-medium">Peta Interaktif</a>
+                                    <a href="#" class="text-weserve-light font-medium">Blog & Tips</a>
+                                    <a href="#" class="text-weserve-light font-medium">About Us</a>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-[30px]">
+                                <h4 class="text-white font-bold text-[18px]">Company</h4>
+                                <div class="flex flex-col gap-4">
+                                    <a href="#" class="text-weserve-light font-medium">Privacy & Policy</a>
+                                    <a href="#" class="text-weserve-light font-medium">Terms and Conditions</a>
+                                    <a href="#" class="text-weserve-light font-medium">Investor Relations</a>
+                                    <a href="#" class="text-weserve-light font-medium">Join With Us</a>
+                                    <a href="#" class="text-weserve-light font-medium">Our Statistics</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-center text-weserve-light font-medium">All Rights Reserved • Copyright Aditmart 2024
+                    </p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/src/js/script.js"></script>
+    <script src="/src/js/swiper.js"></script>
+
+    <!-- Jquery script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <!-- Leaflet Script -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet-minimap/dist/Control.MiniMap.min.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
+    <script src="/src/assets/gis/js/leaflet.groupedlayercontrol.js"></script>
+    <script src="/src/assets/gis/js/L.Control.ZoomBar.js"></script>
+    <script src="/src/assets/gis/js/Leaflet.Coordinates-0.1.5.min.js"></script>
+
+    <script src="/src/js/leaflet/layer.js"></script>
+    <script src="/src/js/map-gis.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,343 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.79252114926645,
+                    -6.155100965685419
+                ]
+            },
+            "properties": {
+                "name": "Indomaret Jelambar Baru Raya 8",
+                "address": "Jalan Jelambar Baru Raya No. 8, Kel. Jelambar Baru, Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460",
+                "facilities": [
+                    "Toilet",
+                    "Tempat Parkir"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.78969440559811,
+                    -6.155266454313211
+                ]
+            },
+            "properties": {
+                "name": "Indomaret Jelambar Utama Raya 33",
+                "address": "Jalan Jelambar Baru No. 33, Kel. Jelambar, Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460",
+                "facilities": [
+                    "Toilet",
+                    "Tempat Parkir",
+                    "ATM"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.78751697862629,
+                    -6.1550129329230305
+                ]
+            },
+            "properties": {
+                "name": "Indomaret Jelambar Baru 2",
+                "address": "Jalan Jelambar Baru Raya Blok G Persil No. 12, 13, 14, Kel. Jelambar, Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460",
+                "facilities": [
+                    "Toilet",
+                    "Tempat Parkir",
+                    "ATM"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.79031091764533,
+                    -6.159206472383654
+                ]
+            },
+            "properties": {
+                "name": "Indomaret Empang Bahagia 4",
+                "address": "Jalan Empang Bahagia Raya No. 4 Blok AB6&7, Kel. Jelambar, Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460",
+                "facilities": [
+                    "Toilet",
+                    "Tempat Parkir",
+                    "ATM"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.7876531235467,
+                    -6.158564708556117
+                ]
+            },
+            "properties": {
+                "name": "Indomaret Empang Bahagia",
+                "address": "Jalan Empang Bahagia No. 49, Kel. Jelambar, Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460",
+                "facilities": [
+                    "Toilet",
+                    "Tempat Parkir",
+                    "Tempat Duduk",
+                    "ATM"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.78564957339245,
+                    -6.160277751978404
+                ]
+            },
+            "properties": {
+                "name": "Indomaret Hadiah",
+                "address": "Jalan Hadiah Utama No. 32 - 32A, RT 008, RW 011, Kel. Jelambar, Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460",
+                "facilities": [
+                    "Toilet",
+                    "Tempat Parkir"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.78189920969777,
+                    -6.16144931125967
+                ]
+            },
+            "properties": {
+                "name": "Indomaret Hadiah No. 2",
+                "address": "Jalan Hadiah 2, Kel. Jelambar, Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460",
+                "facilities": [
+                    "Toilet",
+                    "Tempat Parkir",
+                    "ATM"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.78025071137431,
+                    -6.156123068248888
+                ]
+            },
+            "properties": {
+                "name": "Indomaret Jelambar Kav. Polri",
+                "address": "Jalan Almanah Kav. Polri Blok E No. 1393 B-C, Kel. Jelambar, Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460",
+                "facilities": [
+                    "Toilet",
+                    "Tempat Parkir",
+                    "ATM"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.78470822205712,
+                    -6.152774156483126
+                ]
+            },
+            "properties": {
+                "name": "Indomaret Jelambar Utama 51",
+                "address": "Jalan Jelambar Utama No. 51, Blok J Persil No. 28, Kel. Jelambar Baru, Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460",
+                "facilities": [
+                    "Toilet",
+                    "Tempat Parkir",
+                    "ATM"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.78113397119267,
+                    -6.1508453234502936
+                ]
+            },
+            "properties": {
+                "name": "Indomaret Jelambar Utama 3",
+                "address": "Jalan Utama Raya No. 3A-3B-3C-3D, Kel. Jelambar, Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460",
+                "facilities": [
+                    "Toilet",
+                    "Tempat Parkir",
+                    "ATM"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.78335531958476,
+                    -6.150643371547904
+                ]
+            },
+            "properties": {
+                "name": "Indomaret Jelambar Barat 2",
+                "address": "Jalan Jelambar Barat III A, No. 27, Kel. Jelambar Baru, Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460",
+                "facilities": [
+                    "Toilet",
+                    "Tempat Parkir",
+                    "ATM"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.78336040332213,
+                    -6.146378492634196
+                ]
+            },
+            "properties": {
+                "name": "Indomaret Jelambar Barat 3",
+                "address": "Jalan Jelambar Barat III No. 6, RT 006, RW 010, Kel. Jelambar Baru, Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460",
+                "facilities": [
+                    "Toilet",
+                    "Tempat Parkir",
+                    "ATM"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.79068878142252,
+                    -6.151002483359293
+                ]
+            },
+            "properties": {
+                "name": "Indomaret Pakuwon",
+                "address": "Alamat: Jalan Jelambar Selatan Komplek Pakuwon GB/9, Kel. Jelambar Baru, Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460",
+                "facilities": [
+                    "Toilet",
+                    "Tempat Parkir",
+                    "ATM"
+                ]
+            }
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.78483180834216,
+                    -6.149260730863426
+                ]
+            },
+            "properties": {
+                "name": "Indomaret Seni Budaya",
+                "address": "Jalan Seni Budaya Raya, RT 013, RW 015, Kel. Jelambar Baru, Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460",
+                "facilities": [
+                    "Toilet",
+                    "Tempat Parkir"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.78063019855028,
+                    -6.147464154951151
+                ]
+            },
+            "properties": {
+                "name": "Indomaret Duta Mas 11",
+                "address": "Jl. Kusuma C2, No. 11, RT 016, RW 009, Kel. Wijaya Kusuma, Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460",
+                "facilities": [
+                    "Toilet",
+                    "Tempat Parkir",
+                    "ATM"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.78016917439372,
+                    -6.1488927742527135
+                ]
+            },
+            "properties": {
+                "name": "Indomaret Taman Duta Mas 1",
+                "address": "Perum Duta Mas Blok B1 No. 11, Kel. Wijaya Kusuma, Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460",
+                "facilities": [
+                    "Toilet",
+                    "Tempat Parkir"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.78875816913174,
+                    -6.164160929346639
+                ]
+            },
+            "properties": {
+                "name": "Indomaret Satria Raya",
+                "address": "Jalan Satria Raya, RT 004, RW 004, Kel. Jelambar, Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460",
+                "facilities": [
+                    "Toilet",
+                    "Tempat Parkir",
+                    "ATM"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    106.79057850138389,
+                    -6.1600043127157385
+                ]
+            },
+            "properties": {
+                "name": "Indomaret Latumenten 20",
+                "address": "Jalan Prof. Dr. Latumenten Kios AGF 16-19, Kel. Jelambar, Kec. Grogol Petamburan, Kota Jakarta Barat, DKI Jakarta, 11460",
+                "facilities": [
+                    "Toilet",
+                    "Tempat Parkir",
+                    "ATM"
+                ]
+            }
+        }
+    ]
+}

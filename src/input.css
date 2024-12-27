@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        color: #080C2E;
+        background-color: #F1F4F5;
+        font-family: "poppins", Poppins, sans-serif;
+    }
+}
+
+@keyframes infinite-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animate-infinite-scroll {
+    display: flex;
+    animation: infinite-scroll 20s linear infinite;
+}
+
+.animate-infinite-scroll:hover {
+    animation-play-state: paused;
+}

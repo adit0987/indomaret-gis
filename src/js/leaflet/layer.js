@@ -107,12 +107,37 @@ $.getJSON(baseUrl +'/src/assets/gis/geojson/sungai_jakarta_barat.geojson', funct
 $.getJSON(baseUrl + '/src/assets/gis/geojson/kecamatan_grogol_petamburan.geojson', function (kode) {
     L.geoJson(kode, {
         style: function (feature) {
+            var color = "#8B4513"; //Default Warna Cokelat
+            if (feature.properties.NAMOBJ == "Tanjungduren Utara") {
+                color = "#0000FF"; //Tanjung Duren Utara Warna Biru
+            }
+            else if (feature.properties.NAMOBJ == "Tanjungduren Selatan") {
+                color = "#FF0000" //Tanjung Duren Selatan Warna Merah
+            }
+            else if (feature.properties.NAMOBJ == "Wijayakusuma") {
+                color = "#00FF00" //Wijaya Kusuma Warna Hijau
+            }
+            else if (feature.properties.NAMOBJ == "Jelambar") {
+                color = "#FFFF00" //Jelambar Warna Kuning
+            }
+            else if (feature.properties.NAMOBJ == "Jelambarbaru") {
+                color = "#00FFFF" //Jelambar Baru Warna Biru Muda
+            }
+            else if (feature.properties.NAMOBJ == "Grogol") {
+                color = "#FFA500" //Grogol Warna Jingga
+            }
+            else if (feature.properties.NAMOBJ == "Tomang") {
+                color = "#800080" //Tomang Warna Ungu
+            }
             return { 
-                color: "#FFA500", 
+                color: color, 
                 weight: 2, 
-                fillOpacity: 0.2
+                fillOpacity: 0.2,
             };
-        }
+        },
+        onEachFeature: function (feature, layer) {
+            layer.bindPopup("Kelurahan " + feature.properties.NAMOBJ);
+        },
     }).addTo(kecamatan);
 });
 
